@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BarangController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/barang0175', 'App\Http\Controllers\BarangController@index');
+Route::resource('barang',BarangController::class);
+//Route::resource('/barang', 'App\Http\Controllers\BarangController');
